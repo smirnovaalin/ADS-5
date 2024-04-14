@@ -18,13 +18,13 @@ bool isZnak(char a) {
 std::string infx2pstfx(std::string inf) {
   std::string inf2;
   TStack<char, 100> stack1;
-	for (char i : inf) {
+  for (char i : inf) {
     if (i >= '0' && i <= '9') {
       inf2 = inf2 + i + ' ';
     } else if (i == '(') {
       stack1.push(i);
     } else if (isZnak(i)) {
-      while (!stack1.isEmpty() && prioritet(stack1.get()) >= prioritet(i)){
+      while (!stack1.isEmpty() && prioritet(stack1.get()) >= prioritet(i)) {
         inf2 = inf2 + stack1.get() + ' ';
         stack1.pop();
       }
