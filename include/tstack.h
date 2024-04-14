@@ -1,14 +1,14 @@
 // Copyright 2021 NNTU-CS
 #ifndef INCLUDE_TSTACK_H_
 #define INCLUDE_TSTACK_H_
-
+#include <string>
 template<typename T, int size>
 class TStack {
-private:
+ private:
 T data[100];
 int top;
 
-public:
+ public:
 TStack() : top(-1) {}
 void push(T value) {
   if (!isFull())
