@@ -44,8 +44,10 @@ std::string infx2pstfx(std::string inf) {
 		inf2 = inf2 + stack1.get() + ' ';
 		stack1.pop();
 	}
+		if (!inf2.empty()) {
+		inf2.pop_back();
+   }
 	return inf2;
-  return std::string("");
 }
 
 int eval(std::string pref) {
@@ -81,5 +83,4 @@ int eval(std::string pref) {
 		}
 	}
 	return stack2.get();
-  return 0;
 }
